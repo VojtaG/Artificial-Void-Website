@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://kit.fontawesome.com/64d58efce2.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./css/login.css" />
+    <title>Login | Artificial Void</title>
+    <link rel="icon" href="/img/av-1024.png">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="forms-container">
+            <div class="signin-signup">
+
+                <!-- ---------------------------------------------------------------- LOGIN ---------------------------------------------------------------- -->
+                <form class="sign-in-form" action="/php/login" method="POST" id="logform" autocomplete="off">
+                    
+                    <h2 class="title">Log in</h2>
+
+                    <div class="input-field">
+                        <i class="fas fa-user"></i>
+                        <input type="text" name="usernameData" placeholder="Username" minlength="4" maxlength="24" id="logusername" onfocusout="checkInputsUsernameLogin()" onkeyup="cleanUsername('logusername')" onkeydown="cleanUsername('logusername')" />
+                        <i class="erroricon fas fa-exclamation-circle"></i>
+                        <small class="form-login-message">Unknown Error - please contact the support.</small>
+                    </div>
+                    <div class="input-field">
+                        <i class="fas fa-lock"></i>
+                        <input type="password" name="passwordData" placeholder="Password" onpaste="return false;" ondrop="return false;" minlength="8" maxlength="255" id="logpassword" onfocusout="checkInputsPasswordLogin()" onkeyup="cleanPassword('logpassword')" onkeydown="cleanPassword('logpassword')" />
+                        <i class="erroricon fas fa-exclamation-circle"></i>
+                        <small>Unknown Error - please contact the support.</small>
+                    </div>
+
+                    <input type="submit" value="Login" class="btn solid" name="loginbutton" />
+                    
+
+                    <p class="social-text">Or Login with social platforms</p>
+
+
+                    <div class="social-media">
+                        <a href="#" class="social-icon">
+                            <i class="fab fa-discord"></i>
+                        </a>
+                        <a href="#" class="social-icon">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="social-icon">
+                            <i class="fab fa-google"></i>
+                        </a>
+                        <a href="#" class="social-icon">
+                            <i class="fab fa-github"></i>
+                        </a>
+                    </div>
+                </form>
+                
+                <!-- ---------------------------------------------------------------- REGISTER ---------------------------------------------------------------- -->
+                <form class="sign-up-form" action="./php/register/" method="POST" id="regform" autocomplete="off">
+                    <h2 class="title">Sign up</h2>
+                    <div class="input-field">
+                        <i class="fas fa-user"></i>
+                        <input type="text" name="username" oninput="checkInputsUsernameRegister()" onkeyup="cleanUsername('regusername')" onkeydown="cleanUsername('regusername')" placeholder="Username" maxlength="24" id="regusername" />
+                        <span class="numbers outline"><p>0</p>/24</span>
+                    </div>
+                    <div class="input-field">
+                        <i class="fas fa-envelope"></i>
+                        <input type="email" name="email" onfocusout="checkInputsEmailRegister()" placeholder="Email" maxlength="255" id="regemail" />
+                        <i class="erroricon fas fa-exclamation-circle"></i>
+                        <small>Unknown Error - please contact the support.</small>
+                    </div>
+                    <div class="input-field">
+                        <i class="fas fa-lock"></i>
+                        <input type="password" name="password" oninput="checkInputsPasswordRegister()" onpaste="return false;" ondrop="return false;" placeholder="Password" maxlength="255" onkeyup="cleanPassword('regpassword')" onkeydown="cleanPassword('regpassword')" id="regpassword" />
+                        <span class="numbers outline3"><p>0</p>/255</span>
+                    </div>
+
+                    <input type="submit" class="btn" value="Sign up" name="registerbutton" />
+
+                    <p class="social-text">Or Sign up with social platforms</p>
+                    <div class="social-media">
+                        <a href="#" class="social-icon">
+                            <i class="fab fa-discord"></i>
+                        </a>
+                        <a href="#" class="social-icon">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="social-icon">
+                            <i class="fab fa-google"></i>
+                        </a>
+                        <a href="#" class="social-icon">
+                            <i class="fab fa-github"></i>
+                        </a>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+<!-- ---------------------------------------------------------------- SWITCH ---------------------------------------------------------------- -->
+        <div class="panels-container">
+            <div class="panel left-panel">
+                <div class="content">
+                    <h3>New here ?</h3>
+                    <p>Create an account and setup your void today! Become a professional engineer with us..</p>
+                    <div class="buttonPanel" id="sign-up-btn">
+                        <span>Sign Up</span>
+                    </div>
+                </div>
+                <!-- <img src="img/log.svg" class="image" alt="" /> -->
+            </div>
+            <div class="panel right-panel">
+                <div class="content">
+                    <h3>Already a member ?</h3>
+                    <p>We are glad that you are back! Log-in to your account and continue in your work...</p>
+                    <div class="buttonPanel" id="sign-in-btn">
+                        <span id="sign-in-btn">Log in</span>
+                    </div>
+                </div>
+                <!-- <img src="img/register.svg" class="image" alt="" /> -->
+            </div>
+        </div>
+    </div>
+    <!-- SCRIPTS -->
+    <script src="./js/login.js"></script>
+
+</body>
+
+</html>
