@@ -6,8 +6,9 @@ Source code of the official [Artificial Void](https://artificialvoid.com) projec
 
 (Some icons missing)
 ### Login & Register Page
-![image](https://github.com/user-attachments/assets/fc560355-fbc6-4438-b0d8-5edac1c35bc1)
+![image](https://github.com/user-attachments/assets/5decbcae-0f26-43f6-8a23-eb44886aae62)
 ![image](https://github.com/user-attachments/assets/9858064b-498c-4f6b-8950-192f2b882404)
+
 
 ### Team Page:
 ![image](https://github.com/user-attachments/assets/359a9b0b-64bb-4bc0-b87a-acb091c99568)
